@@ -1,16 +1,17 @@
 :root {
-  --primary-text-color: #757575; /* Основний колір тексту #757575 */
-  --title-text-color: #212121; /* Колір заголовків #212121 */
-  --secondary-text-color: #FFFFFF; /* Білий колір тексту #FFFFFF */
-  --accent-color: #2196F3; /* Акцент блакитний активні #2196F3 */
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --background-text-color: #FFFFFF;
+  --accent-color: #2196F3;
+  --logo-header-second-color: #000000;
+  --hero-footer-background-color: #2F303A;
+  --section-team-color: #F5F4FA;
+  --button-hero-activ-color: #188CE8;
 }
 
 .page{
-   /* Основний колір фону #FFFFFF */
-  background-color: #ffffff;
-  /* Основний колір тексту #757575 */
+  background-color: var(--background-text-color);
   color: var(--primary-text-color);
-  /* основний шрифт */
   font-family: 'Roboto', sans-serif; 
 
 }
@@ -26,11 +27,11 @@
 /*__________________________________header___________________________________*/
 /* site logo */
 .header{
-  background-color: #ffffff;
+  background-color: var(--background-text-color);
 }
 
 .logo{
-  color: #2196F3;
+  color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -39,7 +40,7 @@
 }
 
 .logo-second-color{
-  color: #000000;
+  color: var(--logo-header-second-color);
 }
 
 /* site navigation */
@@ -82,11 +83,11 @@
 
 /* hero */
 .hero{
-  background-color: #2F303A;
+  background-color: var(--hero-footer-background-color);
 }
 
 .hero-title{
-  color: #ffffff;
+  color: var(--background-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -97,7 +98,7 @@
 
 .button-hero{
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--background-text-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -109,7 +110,7 @@
 
 .button-hero:hover,
 .button-hero:focus{
-  background-color: #188CE8;
+  background-color: var(--button-hero-activ-color);
 }
 
 /* ________________________________________main_______________________________________ */
@@ -122,6 +123,19 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.visually-hidden{
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .section-title.desc{
@@ -142,7 +156,7 @@
 }
 
 .section-team{
-  background-color: #F5F4FA;
+  background-color: var(--section-team-color);
 }
 
 .section-team h3{
@@ -164,7 +178,7 @@
 
 /*________________________________________futer________________________________________*/
 .footer{
-  background-color: #2F303A;
+  background-color: var(--hero-footer-background-color);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;  
@@ -172,7 +186,7 @@
 
 .logo-footer-second-color,
 .footer-address{
-  color: #ffffff;
+  color: var(--background-text-color);
 }
 
 address{
@@ -181,14 +195,14 @@ address{
 
 .footer-cont,
 .footer-tel{
-  color: rgb(255, 255, 255, 60%);
+  color: rgba(255, 255, 255, 60%);
 }
 /* _____________________________________portfolio page_________________________________ */
 
 /* main portfolio */
 .button-filter{
-  background-color: #F5F4FA;
-  color: #212121;
+  background-color: var(--section-team-color);
+  color: var(--title-text-color);
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -202,11 +216,11 @@ address{
 .button-filter:hover,
 .button-filter:hover{
   background-color: var(--accent-color);
-  color: var(--secondary-text-color);
+  color: var(--background-text-color);
 }
 
 .portfolio-project-title{
-  color: #212121;
+  color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
